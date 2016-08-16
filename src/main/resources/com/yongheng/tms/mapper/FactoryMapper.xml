@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yongheng.tms.factory">
+
+    <select id="find" parameterType="Map" resultMap="factoryRM">
+        SELECT * FROM `factory_c`
+    </select>
+
+    <resultMap id="factoryRM" type="com.yongheng.tms.entity.Factory">
+        <id property="id" column="FACTORY_ID"/>
+        <result property="fullName" column="FULL_NAME"/>
+        <result property="factoryName" column="FACTORY_NAME"/>
+        <result property="contractor" column="CONTRACTOR"/>
+        <result property="phone" column="PHONE"/>
+        <result property="mobile" column="MOBILE"/>
+        <result property="fax" column="FAX"/>
+        <result property="cNote" column="CNOTE"/>
+        <result property="inspector" column="INSPECTOR"/>
+        <result property="cType" column="CTYPE"/>
+        <result property="state" column="STATE"/>
+        <result property="orderNo" column="ORDER_NO"/>
+    </resultMap>
+
+
+</mapper>
