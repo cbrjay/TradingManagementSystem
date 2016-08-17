@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>添加厂家</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -81,45 +81,14 @@
             </ul>
         </div>
 
+        <div class="col-sm-6 col-md-offset-2 main">
+            <h1>
+                操作成功！
+            </h1>
 
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-
-            <h3 class="sub-header">生产厂家</h3>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>编号</th>
-                        <th>厂家</th>
-                        <th>厂家名称</th>
-                        <th>联系人</th>
-                        <th>电话</th>
-                        <th>传真</th>
-                        <th>备注</th>
-                        <th>验证人</th>
-
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <c:forEach var="factory" items="${factoryList}">
-                        <tr>
-                            <td>${factory.id}</td>
-                            <td>${factory.factoryName}</td>
-                            <td>${factory.fullName}</td>
-                            <td>${factory.contractor}</td>
-                            <td>${factory.phone}</td>
-                            <td>${factory.mobile}</td>
-                            <td>${factory.fax}</td>
-                            <td>${factory.cNote}</td>
-                            <td>${factory.inspector}</td>
-                        </tr>
-                    </c:forEach>
-
-                    </tbody>
-                </table>
-            </div>
         </div>
+
+
     </div>
 </div>
 
@@ -127,6 +96,17 @@
 <script src="/static/scripts/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/static/scripts/ie10-viewport-bug-workaround.js"></script>
+
+<script>
+    $(function () {
+        setInterval(back, 500)
+    })
+
+    function back() {
+        window.location.href = "list";
+    }
+
+</script>
 
 </body>
 </html>

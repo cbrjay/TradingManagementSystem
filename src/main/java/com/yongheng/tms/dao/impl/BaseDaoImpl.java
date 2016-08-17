@@ -32,19 +32,19 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
     public void update(T obj) {
         SqlSession session = getSqlSession();
-        session.selectList(nameSpace + ".update", obj);
+        session.update(nameSpace + ".update", obj);
         session.close();
     }
 
     public void delete(T obj) {
         SqlSession session = getSqlSession();
-        session.selectList(nameSpace + ".delete", obj);
+        session.delete(nameSpace + ".delete", obj);
         session.close();
     }
 
     public void insert(T obj) {
         SqlSession session = getSqlSession();
-        session.selectList(nameSpace + ".insert", obj);
+        session.insert(nameSpace + ".insert", obj);
         session.close();
     }
 

@@ -1,11 +1,12 @@
 package com.yongheng.tms.entity;
 
 import java.io.Serializable;
+import java.util.UUID;
 
-public class Factory implements Serializable{
+public class Factory implements Serializable {
 
     private String id;
-    private  String fullName;
+    private String fullName;
     private String factoryName;
     private String contractor;
     private String phone;
@@ -16,6 +17,10 @@ public class Factory implements Serializable{
     private String cType;
     private String state;
     private int orderNo;
+
+    public Factory() {
+        setId(UUID.randomUUID().toString());
+    }
 
     public String getId() {
         return id;
